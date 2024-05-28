@@ -51,3 +51,18 @@ def expc(a, b, c):
         b = int(b) + 1
     return b
 
+mlife = 50
+life = 10
+
+def upd():
+    global mlife, life, lifebar
+    lifebar = {1 : numbar(life, 0, mlife, [green,blue,red]), 2 : bar(life, 0, mlife, [greenbg,bluebg,red])}
+    return lifebar
+
+upd()
+print(lifebar[1], '\n', lifebar[2])
+
+life = 20
+upd()
+
+print(lifebar[1], '\n', lifebar[2])
